@@ -2,8 +2,16 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>{{htmlWebpackPlugin.options.title}}</title>
+  <title>Geo-review</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=98cd413a-5900-424b-83b7-224c5d5a89c6&lang=ru_RU"
+        type="text/javascript">
+  </script>
+
 </head>
 <body>
+  <div class="map" id="map" style="width: 100%; height: 100vh;"></div>
+  <div class="review-block" id="review-block" style="display: none" >
+    {{> "./src/templates/makeFormTemplate.hbs"}}
+  </div>
 </body>
 </html>
