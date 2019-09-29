@@ -1,4 +1,4 @@
-## https://olgajaer.github.io/geo-review/src
+## https://olgajaer.github.io/geo-review/dist
 
 ### Доступные команды
 

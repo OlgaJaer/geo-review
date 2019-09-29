@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Geo-review</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=98cd413a-5900-424b-83b7-224c5d5a89c6&lang=ru_RU"
+        type="text/javascript">
+  </script>
+
+<link href="index.css" rel="stylesheet"></head>
+<body>
+  <div class="map" id="map" style="width: 100%; height: 100vh;"></div>
+  <div class="review-block" id="review-block" style="display: none" >
+    <div class="review">
+        <div class="header" id="header">
+            <div class="title">
+                <img class="title__pic" src=""/>
+                <div class="title__text"></div>        
+            </div>
+            <div class="header__close" id="closeForm"></div>
+        </div>
+        <div class="review__content">
+            <ul class="review__list" id="reviewList">
+            </ul>
+        </div>
+        <form class="form" name="form" action="">
+            <div class="form__title">ваш отзыв</div>
+            <input type="text" name="form"  id="name" class="form__input form__input--name" placeholder="Ваше имя">
+            <input type="text" name="form" id="place" class="form__input form__input--place" placeholder="Укажите место">
+            <textarea  id="textReview" name="form"  class="form__input form__input--review" placeholder="Поделитесь впечатлениями"></textarea>
+            <button type="submith" class="form__btn" id="save">Добавить</button>
+        </form>
+    </div>  </div>
+<script type="text/javascript" src="index.a7122cbdfba0da6f8a2c.js"></script></body>
+</html>
