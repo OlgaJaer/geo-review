@@ -1,5 +1,4 @@
 import { makeReview } from '../common/makeReview.js';
-import { myStorage } from '../index.js';
 
 export function addReview() {
     document.addEventListener('click', (e) => {
@@ -8,7 +7,13 @@ export function addReview() {
         if (target.classList.contains('form__btn')) {
             e.preventDefault();
 
-            let point = JSON.parse(myStorage.data ||'{}');
+            const reviewBlock = document.querySelector('#review-block');
+
+            let point = {
+                address: reviewBlock.dataset.address,
+                coords: reviewBlock.dataset.coord.split(','),
+                position: reviewBlock.dataset.position.split(',')
+            }; 
 
             makeReview(point);
         }

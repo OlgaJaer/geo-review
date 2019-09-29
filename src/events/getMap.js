@@ -1,4 +1,4 @@
-import makeFormTemplate from '../templates/makeFormTemplate.hbs';
+//import makeFormTemplate from '../templates/makeFormTemplate.hbs';
 import { getPoint }  from '../common/getPoint';
 import { showForm } from '../common/showForm';
 import { getPlacemarks } from '../common/getPlacemarks';

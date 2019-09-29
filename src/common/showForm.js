@@ -4,7 +4,10 @@ import { myStorage } from '../index.js';
 export function showForm(point) {
     
     const reviewBlock = document.querySelector('#review-block');
-    reviewBlock.setAttribute('data-coord', 'point.coords');
+
+    reviewBlock.setAttribute('data-coord', point.coords);
+    reviewBlock.setAttribute('data-address', point.address);
+    reviewBlock.setAttribute('data-position', point.position);
 
     let reviewsArr = [];
 

@@ -1,9 +1,14 @@
-import { placemarksCoords, myStorage } from '../index.js';
+//import { placemarksCoords, myStorage } from '../index.js';
 import { makePosition } from './makePosition.js';
 
 export function getPoint(e) {
+    const reviewBlock = document.querySelector('#review-block');
     let coords = e.get('coords'); 
     let myGeocoder = ymaps.geocode(coords);
+
+    reviewBlock.setAttribute('data-coord', '');
+    reviewBlock.setAttribute('data-address', '');
+    reviewBlock.setAttribute('data-position', '');
 
     return (
         myGeocoder.then((res) => {
@@ -15,12 +20,8 @@ export function getPoint(e) {
                 coords: coords,
                 position: makePosition(position) 
             };
-
-            myStorage.data = JSON.stringify(point);
-            placemarksCoords.items.push(point.address);
        
             return point;
         })
-
     )
 }

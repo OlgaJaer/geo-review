@@ -19,8 +19,7 @@ export function clickBalloonLink() {
                         address: `${obj.properties.get('text')}`,
                         coords: coords,
                         position: makePosition(position)
-                    };
-
+                    }
                     return point;
                 }
             )
