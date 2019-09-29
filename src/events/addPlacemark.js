@@ -1,5 +1,5 @@
 import { placemarksCoords } from '../index.js';
-import { showForm } from './showForm.js';
+import { showForm } from '../common/showForm.js';
 
 export function addPlacemark(point, newReview) {
     if (placemarksCoords.items.length) {
@@ -8,28 +8,19 @@ export function addPlacemark(point, newReview) {
                 openBalloonOnClick: false,
                 balloonContentHeader: newReview.place,
                 balloonContentLink: point.address,
-                balloonContentBody: getContentBody(),
+                balloonContentBody: newReview.textReview,
                 balloonContentFooter: newReview.date,
                 balloonContentCoords: point.coords
             }, 
             { 
-                preset: 'islands#DarkOrangeIcon'
+                preset: 'islands#violetIcon'
             }
         );
-        let  placemarkBodies;
-        function getContentBody() {
-            if (!placemarkBodies) {
-                placemarkBodies = [
-                    [newReview.textReview].join('<br/>')
-                ];
-            }
-            return '<br>' + placemarkBodies;
-        }
 
-        placemark.events.add('click', function () {
+        placemark.events.add('click', () => {
             point = showForm(point);    
         })
-
+      
         return placemark;
     }   
     return 

@@ -5,7 +5,7 @@ import './styles/index.css';
 import { getMap } from './events/getMap.js';
 import { closeForm } from './events/closeForm.js';
 import { addReview } from './events/addReview.js';
-//import { clickBalloonLink } from './common/clickBalloonLink.js';
+import { clickBalloonLink } from './events/clickBalloonLink.js'
 
 export let myStorage = {
     items: []
@@ -22,3 +22,4 @@ export let placemarksCoords = {
 getMap();
 closeForm();
 addReview();
+clickBalloonLink();

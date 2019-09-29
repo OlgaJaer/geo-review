@@ -1,7 +1,7 @@
 import { myStorage } from '../index.js';
 import { placemarksCoords } from '../index.js';
 import { clusterer } from '../events/getMap.js';
-import { addPlacemark } from './addPlacemark.js';
+import { addPlacemark } from '../events/addPlacemark.js';
 
 export function getPlacemarks() {
     for (const item of myStorage.items) {

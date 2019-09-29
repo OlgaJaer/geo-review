@@ -1,25 +1,19 @@
 export function makePosition(position) {
-    
     let x = position[0];
     let y = position[1];
     let displayWidth = document.documentElement.clientWidth;
-    let displayHeight = document.documentElement.clientHeight;
-    console.log(x, y);
+    
     if (y < 530) {
-        y += 530;
-        if (y > displayHeight) {
-            y = y - 260;
-            x = x - 190;
-        }
-    }
+        y = 530;
+    } 
 
     if (x < 200) {
         x = 200;
-    }
-    console.log(x, y);
-    if (x > displayWidth) {
+    } else if ((displayWidth - x) < 200) {
         x = displayWidth - 200;
+    } else {
+        x;
     }
-    console.log(x,y);
+   
     return [x, y];
 }
